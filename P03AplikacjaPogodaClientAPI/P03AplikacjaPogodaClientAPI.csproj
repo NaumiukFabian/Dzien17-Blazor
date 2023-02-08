@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UserSecretsId>cfaa4b2e-5bc4-41d8-a364-e93a786c2903</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\phone.gif" />
+  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CognitiveServices.Speech" Version="1.25.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+		<PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\P05Sklep.Shared\P05Sklep.Shared.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Resource Include="Images\logo.png">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Resource>
+	  <Resource Include="Images\phone.gif">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Resource>
+	</ItemGroup>
+</Project>
